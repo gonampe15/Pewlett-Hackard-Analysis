@@ -42,7 +42,7 @@ SELECT DISTINCT ON (e.emp_no) e.emp_no,
 	   de.from_date,
 	   de.to_date,
 	   t.title
-INTO mentorship_eligibilty
+INTO mentorship_eligibility
 FROM employees as e
 INNER JOIN dept_emp as de
 ON (e.emp_no = de.emp_no)
@@ -53,4 +53,4 @@ AND (t.to_date = '9999-01-01')
 AND (de.to_date = '9999-01-01')
 ORDER BY e.emp_no ASC, de.from_date DESC;
 -- Checking the new table
-SELECT * FROM mentorship_eligibilty;
+SELECT * FROM mentorship_eligibility;
